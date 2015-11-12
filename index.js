@@ -18,7 +18,7 @@ module.exports = React.createClass({
 		})
 	},
 	componentWillUnmount: function() {
-		this.sticky.destroy();
+		if (this.sticky) this.sticky.destroy();
 	},
 	render: function() {
 		return React.createElement(this.props.tag, {ref: 'wrapper', className: this.props.className}, [
